@@ -136,7 +136,7 @@ class ConfigReader {
     {
         if ($this->sheet)
         {
-            if (str_contains($coordinate, ':'))
+            if (\Str::contains($coordinate, ':'))
             {
                 // We want to get a range of cells
                 $values = $this->sheet->rangeToArray($coordinate);

@@ -682,7 +682,7 @@ class LaravelExcelWriter {
     public function __call($method, $params)
     {
         // If the dynamic call starts with "set"
-        if (starts_with($method, 'set') && $this->excel->isChangeableProperty($method))
+        if (\Str::startsWith($method, 'set') && $this->excel->isChangeableProperty($method))
         {
             $this->_setAttribute($method, $params);
 
